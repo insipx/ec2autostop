@@ -1,0 +1,19 @@
+[package]
+name = "ec2autostop"
+version = "0.1.0"
+edition = "2024"
+description = "autostop ec2 instances"
+
+[dependencies]
+aws-config = { version = "1.1", features = ["behavior-version-latest"] }
+aws-sdk-ec2 = "1.16"
+aws-sdk-cloudwatch = "1.13"
+aws-sdk-sns = "1.13"
+jiff = "0.2"
+lambda_runtime = "1"
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[dev-dependencies]
